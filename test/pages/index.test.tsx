@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen, fireEvent } from '../testUtils'
-import Home from '../../pages/index'
+import App from '../../pages/_app'
 
 describe('Home page', () => {
   // it('matches snapshot', () => {
@@ -19,13 +19,13 @@ describe('Home page', () => {
 
 describe('Home', () => {
   it('renders a heading', () => {
-    render(<Home />)
+    render(<App />)
 
     const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
+      name: /Dapp server not configured correctly/i,
     })
 
-    // expect(heading).toBeInTheDocument()
+    expect(heading).toBeInTheDocument()
   })
 })
 })
